@@ -17,7 +17,8 @@ class GameWindow < Gosu::Window
 	end
 
 	def button_down(id)
-		# Add logic
+		close if id == Gosu::KbEscape
+		@buttons_down += 1
 	end
 
 	def button_up(id)
