@@ -1,6 +1,6 @@
 require 'gosu'
 
-class GameWindow < Gosu::Windows
+class GameWindow < Gosu::Window
 	def initialize
 		super
 		self.caption = 'Hello'

@@ -1,6 +1,6 @@
 require 'gosu'
 
-class GameWindow < Gosu::Windows
+class GameWindow < Gosu::Window
 	# Add some screen size
 	def initialize(width=320, height=240, fullscreen=false)
 		super
@@ -34,4 +34,13 @@ class GameWindow < Gosu::Windows
 		self, 'Hello World!', Gosu.default_font_name, 30)
 		@message.draw(@x, @y, 0)
 	end
+
+	private
+
+	def info # Show information on UI
+		"[x:#{@x};y:#{@y}; draws: #{@draws}]"
+	end
 end
+
+window = GameWindow.new
+window.show
