@@ -10,7 +10,7 @@ class GameWindow < Gosu::Windows
 
 	def draw
 		# Provide X/Y screen cordinates and Z equal 0
-		@message.draw(10,10,0)
+		@message.draw(10, 10, 0)
 	end
 
 end
