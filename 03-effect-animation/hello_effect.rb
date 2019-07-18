@@ -9,7 +9,16 @@ class Explosion
 	FRAME_DELAY = 10 # 10ms
 	SPRITE = media_path('boom.png') # Our explosion Asset
 
-	
+	def self.load_animation(window)
+		Gosu::Image.load_tiles(
+			window, SPRITE, 128, 128, false)
+	end
+
+	def initialize(animation, x, y)
+		@animation = animation
+		@x, @y = x, y
+		@current_frame = 0
+	end
 
 
 end
